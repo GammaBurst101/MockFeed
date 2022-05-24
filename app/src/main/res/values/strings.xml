@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MockFeed</string>
+    <!-- Name of the people whose posts are there on main activity -->
+    <!-- Have to replace with an array at the end -->
+    <string name="user_name">John Doe</string>
+
+    <!-- Small info about the person which appears below their name -->
+    <!-- Have to replace with an array at the end -->
+    <string name="user_info">Java Dev</string>
+
+    <!-- Post title  -->
+    <!-- Have to replace with an array at the end -->
+    <string name="post_title">Post Title</string>
+
+    <!-- Small info about the post which appears below the title -->
+    <!-- Have to replace with an array at the end -->
+    <string name="post_small_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit.</string>
 </resources>
