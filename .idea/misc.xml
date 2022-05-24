@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/post_pic.xml" value="0.167" />
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/profile_pic.xml" value="0.126" />
+        <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/profile_pic_bg.xml" value="0.126" />
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/layout/item_card.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>

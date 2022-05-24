@@ -1,18 +1,21 @@
 <resources>
     <string name="app_name">MockFeed</string>
-    <!-- Name of the people whose posts are there on main activity -->
-    <!-- Have to replace with an array at the end -->
-    <string name="user_name">John Doe</string>
 
-    <!-- Small info about the person which appears below their name -->
-    <!-- Have to replace with an array at the end -->
-    <string name="user_info">Java Dev</string>
+    <!-- Default texts for all fields to be used in the item_card.xml -->
 
-    <!-- Post title  -->
-    <!-- Have to replace with an array at the end -->
-    <string name="post_title">Post Title</string>
+    <!-- Default text for user name -->
+    <string name="user_name_def">John Doe</string>
 
-    <!-- Small info about the post which appears below the title -->
-    <!-- Have to replace with an array at the end -->
-    <string name="post_small_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit.</string>
+    <!-- Default text for user info -->
+    <string name="user_info_def">Android Developer</string>
+
+    <!-- Default text for post title  -->
+    <string name="post_title_def">Post Title</string>
+
+    <!-- Default text for a post's small info -->
+    <string name="post_small_info_def">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit.</string>
+
+    <string name="profile_pic_desc">Profile Pic</string>
+    <string name="post_pic_desc">Post Pic</string>
+
 </resources>
