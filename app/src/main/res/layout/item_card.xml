@@ -78,5 +78,11 @@
             android:text="@string/post_small_info_def"
             android:textSize="18sp" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/post_small_info"
+            android:background="@color/black"/>
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
