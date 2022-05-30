@@ -17,6 +17,15 @@
 
     <string name="profile_pic_desc">Profile Pic</string>
     <string name="post_pic_desc">Post Pic</string>
+    <string name="menu_option_1">Profile</string>
+    <string name="menu_option_2">Saved</string>
+    <string name="menu_option_3">Chat</string>
+    <string name="menu_option_4">Settings</string>
+    <string name="menu_option_5">Info</string>
+    
+    <string name="nav_start">Open</string>
+    <string name="nav_stop">Close</string>
+    <string name="nav_header_pic">Navigation Drawer Header Picture</string>
 
     <!-- String arrays to hold all the data -->
     <!-- TODO get actual data here -->
