@@ -1,6 +1,7 @@
 package com.prasoon.mockfeed;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,18 +13,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
-    private String[]  userNames, userInfos, postTitles, postSmallInfos;
-    private Context context;
-    private TypedArray profilePics, postPics;
+    public static String[]  userNames, userInfos, postTitles, postSmallInfos;
+    Context context;
+    public static TypedArray profilePics, postPics;
 
-    Adapter(TypedArray profilePics, String[] userNames, String[] userInfos, TypedArray postPics, String[] postTitles, String[] postSmallInfos, Context context){
+    Adapter(TypedArray profPics, String[] usrNames, String[] usrInfos, TypedArray pstPics, String[] pstTitles, String[] pstSmallInfos, Context context){
         //Get the data from the main activity
-        this.profilePics = profilePics;
-        this.userNames = userNames;
-        this.userInfos = userInfos;
-        this.postPics = postPics;
-        this.postTitles = postTitles;
-        this.postSmallInfos = postSmallInfos;
+        profilePics = profPics;
+        userNames = usrNames;
+        userInfos = usrInfos;
+        postPics = pstPics;
+        postTitles = pstTitles;
+        postSmallInfos = pstSmallInfos;
 
         this.context = context;
     }
@@ -61,7 +62,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
         return userNames.length;
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView profilePic, postPic;
         TextView userName, userInfo, postTitle, postSmallInfo;
         Adapter adapter;
@@ -77,6 +78,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
             postSmallInfo = itemView.findViewById(R.id.post_small_info);
 
             this.adapter = adapter;
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(context, PostActivity.class);
+            intent.putExtra("position", getAdapterPosition());
+            context.startActivity(intent);
         }
     }
 }
