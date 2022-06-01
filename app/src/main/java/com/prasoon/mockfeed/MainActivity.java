@@ -22,13 +22,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Implement the navigation drawer
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_start, R.string.nav_stop);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        //Getting the data from the resources
+        //Getting the data from the app resources
         String[] userNames, userInfos, postTitles, postSmallInfos;
         TypedArray profilePics, postPics;
         profilePics = getResources().obtainTypedArray(R.array.profile_pics);
@@ -44,9 +45,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    //Necessary for the nav drawer button in the action bar to work. Don't know why
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        if(drawerToggle.onOptionsItemSelected(item)){
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
         } else {
             return super.onOptionsItemSelected(item);

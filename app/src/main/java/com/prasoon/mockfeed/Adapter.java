@@ -12,12 +12,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
-    public static String[]  userNames, userInfos, postTitles, postSmallInfos;
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+    public static String[] userNames, userInfos, postTitles, postSmallInfos;//Static so that PostActivity can also access them
     Context context;
     public static TypedArray profilePics, postPics;
 
-    Adapter(TypedArray profPics, String[] usrNames, String[] usrInfos, TypedArray pstPics, String[] pstTitles, String[] pstSmallInfos, Context context){
+    Adapter(TypedArray profPics, String[] usrNames, String[] usrInfos, TypedArray pstPics, String[] pstTitles, String[] pstSmallInfos, Context context) {
         //Get the data from the main activity
         profilePics = profPics;
         userNames = usrNames;
@@ -29,6 +29,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
         this.context = context;
     }
 
+    /*
+    When a view is initially created then a viewholder has to be created for it,
+    which will be recycled and binded to new data when necessary
+     **/
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -62,7 +66,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
         return userNames.length;
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView profilePic, postPic;
         TextView userName, userInfo, postTitle, postSmallInfo;
         Adapter adapter;
@@ -81,6 +85,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
             itemView.setOnClickListener(this);
         }
+
+        /*
+        The post activity will be displaying the post in detail and thus, needs to know the specific
+        data to be used. Instead of passing the position specific data, only the position can also be
+        passed and the other activity will just use the static variables of this class for the data
+        TODO: Implement a data object and improve this method
+         **/
 
         @Override
         public void onClick(View view) {
