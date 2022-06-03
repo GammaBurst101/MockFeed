@@ -52,6 +52,7 @@
             android:id="@+id/post_pic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:transitionName="sharedTransition"
             android:layout_below="@+id/user_info"
             android:contentDescription="@string/post_pic_desc"
             android:src="@drawable/post_pic" />

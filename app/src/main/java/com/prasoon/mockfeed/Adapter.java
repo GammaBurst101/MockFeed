@@ -1,5 +1,7 @@
 package com.prasoon.mockfeed;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -97,7 +99,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public void onClick(View view) {
             Intent intent = new Intent(context, PostActivity.class);
             intent.putExtra("position", getAdapterPosition());
-            context.startActivity(intent);
+
+            //Start the post activity with a shared element transition. The shared element is the post picture here
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, postPic, "sharedTransition");
+            context.startActivity(intent, options.toBundle());
         }
     }
 }
