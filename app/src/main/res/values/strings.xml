@@ -58,16 +58,16 @@
     </string-array>
 
     <string-array name="user_infos">
-        <item>Android Developer 1</item>
-        <item>Android Developer 2</item>
-        <item>Android Developer 3</item>
-        <item>Android Developer 4</item>
-        <item>Android Developer 5</item>
-        <item>Android Developer 6</item>
-        <item>Android Developer 7</item>
-        <item>Android Developer 8</item>
-        <item>Android Developer 9</item>
-        <item>Android Developer 10</item>
+        <item>Assistant Manager</item>
+        <item>Research Intern</item>
+        <item>Web Developer</item>
+        <item>CSE Student</item>
+        <item>Law Student</item>
+        <item>Java Developer</item>
+        <item>Software Developer</item>
+        <item>Android Engineer</item>
+        <item>IBM</item>
+        <item>Android Developer</item>
     </string-array>
 
     <string-array name="post_pics">
