@@ -45,16 +45,16 @@
     </string-array>
 
     <string-array name="user_names">
-        <item>John Doe 1</item>
-        <item>John Doe 2</item>
-        <item>John Doe 3</item>
-        <item>John Doe 4</item>
-        <item>John Doe 5</item>
-        <item>John Doe 6</item>
-        <item>John Doe 7</item>
-        <item>John Doe 8</item>
-        <item>John Doe 9</item>
-        <item>John Doe 10</item>
+        <item>James</item>
+        <item>Mary</item>
+        <item>Patricia</item>
+        <item>Jennifer</item>
+        <item>Elizabeth</item>
+        <item>Linda</item>
+        <item>John</item>
+        <item>Barabara</item>
+        <item>Michael</item>
+        <item>Susan</item>
     </string-array>
 
     <string-array name="user_infos">
