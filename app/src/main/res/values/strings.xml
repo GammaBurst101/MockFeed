@@ -31,18 +31,17 @@
     <string name="nav_header_pic">Navigation Drawer Header Picture</string>
 
     <!-- String arrays to hold all the data -->
-    <!-- TODO get actual data here -->
     <string-array name="profile_pics">
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
-        <item>@drawable/profile_pic_def</item>
+        <item>@drawable/profile_pic_1</item>
+        <item>@drawable/profile_pic_2</item>
+        <item>@drawable/profile_pic_3</item>
+        <item>@drawable/profile_pic_4</item>
+        <item>@drawable/profile_pic_5</item>
+        <item>@drawable/profile_pic_6</item>
+        <item>@drawable/profile_pic_7</item>
+        <item>@drawable/profile_pic_8</item>
+        <item>@drawable/profile_pic_9</item>
+        <item>@drawable/profile_pic_10</item>
     </string-array>
 
     <string-array name="user_names">
