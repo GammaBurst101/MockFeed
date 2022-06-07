@@ -71,16 +71,16 @@
     </string-array>
 
     <string-array name="post_pics">
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
-        <item>@drawable/post_pic</item>
+        <item>@drawable/post_pic_1</item>
+        <item>@drawable/post_pic_2</item>
+        <item>@drawable/post_pic_3</item>
+        <item>@drawable/post_pic_4</item>
+        <item>@drawable/post_pic_5</item>
+        <item>@drawable/post_pic_6</item>
+        <item>@drawable/post_pic_7</item>
+        <item>@drawable/post_pic_8</item>
+        <item>@drawable/post_pic_9</item>
+        <item>@drawable/post_pic_10</item>
     </string-array>
 
     <string-array name="post_titles">
