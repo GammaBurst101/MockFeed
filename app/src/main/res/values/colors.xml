@@ -5,7 +5,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primary_200">#fa928d</color>
-    <color name="primary_500">#ff210c</color>
-    <color name="primary_700">#df000c</color>
+    <color name="primary_light">#04588a</color>
+    <color name="primary">#033f63</color>
+    <color name="primary_dark">#023859</color>
 </resources>

@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class PostActivity extends AppCompatActivity {
 
     @Override
@@ -16,6 +18,12 @@ public class PostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post);
         Intent intent = getIntent();
         int position = intent.getIntExtra("position", 0);//Get the position of the post which was tapped
+
+        //Set toolbar as the action bar
+        setSupportActionBar(findViewById(R.id.toolbar));
+
+        // Remove the default text because we'll be using a textview instead
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         //Get the post's specific information to be displayed to the user
         ImageView profilePic = findViewById(R.id.profile_pic), postPic = findViewById(R.id.post_pic);
@@ -30,5 +38,13 @@ public class PostActivity extends AppCompatActivity {
         postPic.setImageDrawable(ResourcesCompat.getDrawable(getResources(), Adapter.postPics.getResourceId(position, 0), getTheme()));
         postTitle.setText(Adapter.postTitles[position]);
         postDesc.setText(postDescriptions[position]);
+
+        /*
+        Exclude the toolbar and the status bar from the enter transition of the post activity
+        This prevents them from 'blinking'/'flickering' when another activity is launched
+        * */
+        getWindow().getEnterTransition().excludeTarget(android.R.id.statusBarBackground, true);
+        getWindow().getEnterTransition().excludeTarget(R.id.customToolbar, true);
+
     }
 }

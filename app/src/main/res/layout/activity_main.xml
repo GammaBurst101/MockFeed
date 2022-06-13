@@ -11,6 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Had to give id here so that when recyclerview would constraint its top to
+        the bottom of toolbar, it can ref this id.
+        For some reason, @+id/toolbar of @layout/toolbar.xml was not working, though it was
+        detecting it as a valid ID.
+        Also, if I don't constraint the RV, then it renders behind the toolbar as well -->
+        <include
+            android:id="@+id/customToolbar"
+            layout="@layout/toolbar" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="0dp"
@@ -18,7 +27,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/customToolbar">
 
         </androidx.recyclerview.widget.RecyclerView>
 
