@@ -81,9 +81,9 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="12dp"
             android:layout_below="@+id/post_small_info"
-            android:background="@color/black" />
+            android:background="@color/grey" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
