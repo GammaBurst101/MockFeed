@@ -55,8 +55,9 @@
         <ImageView
             android:id="@+id/post_pic"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/user_info"
+            android:adjustViewBounds="true"
             android:contentDescription="@string/post_pic_desc"
             android:src="@drawable/post_pic_1"
             android:transitionName="sharedTransition" />

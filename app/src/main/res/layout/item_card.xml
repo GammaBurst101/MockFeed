@@ -52,6 +52,7 @@
             android:layout_height="200dp"
             android:layout_below="@+id/user_info"
             android:contentDescription="@string/post_pic_desc"
+            android:scaleType="centerCrop"
             android:src="@drawable/post_pic_1"
             android:transitionName="sharedTransition" />
 
