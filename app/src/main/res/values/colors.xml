@@ -9,4 +9,7 @@
     <color name="primary_light">#04588a</color>
     <color name="primary">#033f63</color>
     <color name="primary_dark">#023859</color>
+
+    <color name="nav_bg">#EEEEEE</color>
+    <color name="nav_header_bg">#6aa7c1</color>
 </resources>

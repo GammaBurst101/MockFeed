@@ -29,6 +29,9 @@
     <string name="nav_start">Open</string>
     <string name="nav_stop">Close</string>
     <string name="nav_header_pic">Navigation Drawer Header Picture</string>
+    <string name="curr_user_name">Prasoon Pandey</string>
+    <string name="curr_user_id">\@prasoon06</string>
+
 
     <!-- String arrays to hold all the data -->
     <string-array name="profile_pics">
