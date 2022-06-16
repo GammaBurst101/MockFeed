@@ -76,14 +76,23 @@
             android:layout_below="@+id/post_title"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/post_small_info_def"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/contdText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/post_small_info"
+            android:layout_alignStart="@+id/post_small_info"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/postContdIndicator"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="12dp"
-            android:layout_below="@+id/post_small_info"
+            android:layout_below="@+id/contdText"
             android:background="@color/grey" />
 
     </RelativeLayout>

@@ -31,6 +31,7 @@
     <string name="nav_header_pic">Navigation Drawer Header Picture</string>
     <string name="curr_user_name">Prasoon Pandey</string>
     <string name="curr_user_id">\@prasoon06</string>
+    <string name="postContdIndicator">…</string>
 
 
     <!-- String arrays to hold all the data -->
@@ -100,23 +101,25 @@
     </string-array>
 
     <string-array name="post_small_infos">
-        <item>Whenever they say my ancestors did not build anything extraordinary, i ask them whether they have been anywhere outside Delhi or Agra.</item>
-        <item>Hey everyone! I am happy to share that we - Team 72 emerged as the 𝗧𝗼𝗽 𝟮 𝗙𝗶𝗻𝗮𝗹𝗶𝘀𝘁𝘀 for Code for Good 2022 Hackathon organized by JPMorgan Chase and Co.</item>
+        <item>Whenever they say my ancestors did not build anything extraordinary, i ask them whether they have been anywhere outside Delhi or Agra. That white structure is a wonder because it was nominated by the government of India and has become a wonder on the basis of public voting and </item>
 
-        <item>#30StartupsToWatch | May 2022 Every month, the Inc42 team curates 30 sector-agnostic startups with a unique value proposition</item>
-        <item>Pleased to share that I have officially graduated from IIT ISM Dhanbad. </item>
+        <item>Hey everyone!I am happy to share that we - Team 72 emerged as the 𝗧𝗼𝗽 𝟮 𝗙𝗶𝗻𝗮𝗹𝗶𝘀𝘁𝘀 for Code for Good 2022 Hackathon organized by JPMorgan Chase and Co.It was a great experience working with Abhishek Padhy, Akshat jain, Zaid Shaikh, Aditya Sharma, Samreen Sadiya and Khushi Suresh</item>
 
-        <item> I graduated from Columbia University in the City of New York with a Masters degree in Business Analytics.</item>
+        <item>#30StartupsToWatch | May 2022. Every month, the Inc42 team curates 30 sector-agnostic startups with a unique value proposition. The 28th edition of the 30 Startups To Watch series aims to put emphasis on companies creating value instead of chasing valuation.</item>
 
-        <item>Today I am going to share one of the best &amp; FREE resource to learn SQL:</item>
+        <item>Hello Everyone, Pleased to share that I have officially graduated from IIT ISM Dhanbad. IIT fills you up with humility. I know, the people i have shared this space with, will invent something new for the world or they will lead business economies to growth and wisdom. It is not merely about the best in class studies </item>
 
-        <item>Petrol is roughly ₹100/L. For the same distance CNG almost costs the half.</item>
+        <item>I am incredibly humbled and elated to share that two weeks ago, I graduated from Columbia University in the City of New York with a Masters degree in Business Analytics. My journey at Columbia has truly been an amazing and wonderfully enriching experience</item>
 
-        <item>Mentric started as an Industry oriented training Organization in 2017, focusing on the Building Management sector. We have trained and placed over 1000 students</item>
+        <item>Today I am going to share one of the best and FREE resource to learn SQL. It is the SQL series by Sumit Mittal sir. He has covered all the concepts in depth and solved numerous Leetcode problems for interview preparation. Making it one of the best SQL courses on YouTube. 🙌🏻 Not only this, </item>
 
-        <item>In this picture, elephant represents past karma. Snakes in the pond represents future karma. Branch of the tree represents present life</item>
+        <item>Petrol is roughly ₹100/L. For the same distance CNG almost costs the half. If you have a CNG vehicle in Delhi, you are 8/10 times likely to find a long queue of vehicles. On the flip side, petrol queues have nearly disappeared. Even though petrol is an expensive fuel, at least we save valuable time.</item>
 
-        <item>I am extremely grateful for this.</item>
+        <item>Mentric started as an Industry oriented training Organization in 2017, focusing on the Building Management sector. We have trained and placed over 1000 students - Electrical &amp; Mechanical Engineers in Technical areas and other graduates in non-technical areas - at leading Facility Management organizations.</item>
+
+        <item>In this picture, elephant represents past karma. Snakes in the pond represents future karma. Branch of the tree represents present life white and black rats are day and night which eats the presents life. Honey comb in the tree is Maya, Illusion, sense gratification</item>
+
+        <item>I am extremely grateful for this. A few days back I was invited to KL University for the felicitation on the occasion of the successful stratospheric balloon flight of my payload LakshyaSAT. It was quite a day. Felicitation by Honourable Vice-Chancellor of KL University Dr G.Pardha Saradhi Varma, followed by</item>
     </string-array>
 
 
