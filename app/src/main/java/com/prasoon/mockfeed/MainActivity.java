@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //Set toolbar as the action bar
         setSupportActionBar(toolbar);
 
-        //Remove the default text because we'll be using a textview instead
+        //Remove the default text because we'll be using a custom textview instead
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         //Implement the navigation drawer
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Getting the data from the app resources
         String[] userNames, userInfos, postTitles, postSmallInfos;
-        TypedArray profilePics, postPics;
+        TypedArray profilePics, postPics; //TypedArray are good when we need to handle imageview
         profilePics = getResources().obtainTypedArray(R.array.profile_pics);
         userNames = getResources().getStringArray(R.array.user_names);
         userInfos = getResources().getStringArray(R.array.user_infos);
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         postTitles = getResources().getStringArray(R.array.post_titles);
         postSmallInfos = getResources().getStringArray(R.array.post_small_infos);
 
+        //Set up the recycler view list
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         Adapter adapter = new Adapter(profilePics, userNames, userInfos, postPics, postTitles, postSmallInfos, this);
         recyclerView.setAdapter(adapter);

@@ -18,8 +18,11 @@
     <!-- Default text for a post's full description in post activity -->
     <string name="post_description_def">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus tempor lacus, sed ullamcorper quam ullamcorper in. Quisque hendrerit felis velit.</string>
 
+    <!-- ImageView content descriptions -->
     <string name="profile_pic_desc">Profile Pic</string>
     <string name="post_pic_desc">Post Pic</string>
+
+    <!-- Navigation Drawer menu items -->
     <string name="menu_option_1">Profile</string>
     <string name="menu_option_2">Saved</string>
     <string name="menu_option_3">Chat</string>
@@ -28,9 +31,11 @@
 
     <string name="nav_start">Open</string>
     <string name="nav_stop">Close</string>
+
     <string name="nav_header_pic">Navigation Drawer Header Picture</string>
     <string name="curr_user_name">Prasoon Pandey</string>
     <string name="curr_user_id">\@prasoon06</string>
+
     <string name="postContdIndicator">…</string>
 
 

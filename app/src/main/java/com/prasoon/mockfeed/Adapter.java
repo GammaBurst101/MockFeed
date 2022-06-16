@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
@@ -42,7 +43,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     /*
-    When the layoutmanager requires a view, it asks the recyclerview (getViewForPosition())
+    When the lay manager requires a view, it asks the recyclerview (getViewForPosition())
     The RV checks the cache and if no view is found then the recycled pool is queried (getViewHolderByType())
     If it's found there then the RV calls the Adapter's onBindViewHolder() and passes the
     holder(which is to be recycled right now) and also the position on the list for which all of this
@@ -51,10 +52,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     * */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.profilePic.setImageDrawable(context.getResources().getDrawable(profilePics.getResourceId(position, 0)));
+        holder.profilePic.setImageDrawable(ResourcesCompat.getDrawable(context.getResources(), profilePics.getResourceId(position, 0), context.getTheme()));
         holder.userName.setText(userNames[position]);
         holder.userInfo.setText(userInfos[position]);
-        holder.postPic.setImageDrawable(context.getDrawable(postPics.getResourceId(position, 0)));
+        holder.postPic.setImageDrawable(ResourcesCompat.getDrawable(context.getResources(), postPics.getResourceId(position, 0), context.getTheme()));
         holder.postTitle.setText(postTitles[position]);
         holder.postSmallInfo.setText(postSmallInfos[position]);
     }
@@ -68,6 +69,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return userNames.length;
     }
 
+    /*
+    * A view holder is an object which represents an item on the recycler view list. Point to be noted:
+    * It doesn't represent any SPECIFIC item but can represent different item whenever required
+    * Eg. A certain item gets scrolled away from the screen and a newer one appears. The holder whose
+    * item went off-screen will now start representing the new item i.e. the instance variables will
+    * become the references for the fields in the newer item layout
+    * */
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView profilePic, postPic;
         TextView userName, userInfo, postTitle, postSmallInfo;
@@ -92,7 +100,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         The post activity will be displaying the post in detail and thus, needs to know the specific
         data to be used. Instead of passing the position specific data, only the position can also be
         passed and the other activity will just use the static variables of this class for the data
-        TODO: Implement a data object and improve this method
          **/
 
         @Override

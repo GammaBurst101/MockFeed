@@ -17,7 +17,7 @@ public class PostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
         Intent intent = getIntent();
-        int position = intent.getIntExtra("position", 0);//Get the position of the post which was tapped
+        int position = intent.getIntExtra("position", 0);//Get the position of the post which was tapped pn by the user
 
         //Set toolbar as the action bar
         setSupportActionBar(findViewById(R.id.toolbar));

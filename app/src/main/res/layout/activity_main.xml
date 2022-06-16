@@ -15,7 +15,7 @@
         the bottom of toolbar, it can ref this id.
         For some reason, @+id/toolbar of @layout/toolbar.xml was not working, though it was
         detecting it as a valid ID.
-        Also, if I don't constraint the RV, then it renders behind the toolbar as well -->
+         Since a toolbar is normal ViewGroup, it also needs to follow the layout specified-->
         <include
             android:id="@+id/customToolbar"
             layout="@layout/toolbar" />
