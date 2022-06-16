@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable-anydpi/menu_settings_ic.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1335" />
+        <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/app_icon.xml" value="0.1335" />
+        <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/app_icon_foreground.xml" value="0.1335" />
+        <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1335" />
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/menu_saved_ic.xml" value="0.131" />
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/menu_settings_ic.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/drawable/nav_header_def.xml" value="0.1275" />
@@ -17,6 +21,7 @@
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/layout/navigation_drawer_header.xml" value="0.17447916666666666" />
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/menu/navigation_drawer.xml" value="0.17552083333333332" />
+        <entry key="..\:/AndroidStudioProjects/MockFeed/app/src/main/res/mipmap-anydpi-v26/app_icon.xml" value="0.1335" />
       </map>
     </option>
   </component>
