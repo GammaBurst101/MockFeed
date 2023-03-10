@@ -37,6 +37,15 @@
     <string name="curr_user_id">\@prasoon06</string>
 
     <string name="postContdIndicator">…</string>
+    <string name="sign_in_header">Sign In</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="log_in_btn">Log In</string>
+    <string name="sign_up_prompt">Don\'t have an account?</string>
+    <string name="sign_up_header">Sign Up</string>
+    <string name="re_type_hint">Re-type Password</string>
+    <string name="sign_up_btn">Create Account</string>
+    <string name="login_prompt">Already Have An Account?</string>
 
 
     <!-- String arrays to hold all the data -->
