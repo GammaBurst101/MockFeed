@@ -77,4 +77,9 @@ public class LoginActivity extends AppCompatActivity {
         //If clicked, the user should be redirected to the account creation page
         gotoSignup.setOnClickListener(view -> startActivity(new Intent(this, SignupActivity.class)));
     }
+
+    @Override
+    public void onBackPressed() {
+        //Removed to avoid the user back navigating to the home page
+    }
 }

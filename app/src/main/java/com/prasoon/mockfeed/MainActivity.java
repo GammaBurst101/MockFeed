@@ -123,4 +123,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onBackPressed() {
+        //Removed to avoid the user back navigating to the login/signup page
+    }
 }
