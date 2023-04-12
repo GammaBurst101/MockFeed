@@ -28,6 +28,7 @@
     <string name="menu_option_3">Chat</string>
     <string name="menu_option_4">Settings</string>
     <string name="menu_option_5">Info</string>
+    <string name="menu_option_6">Logout</string>
 
     <string name="nav_start">Open</string>
     <string name="nav_stop">Close</string>
@@ -37,16 +38,19 @@
     <string name="curr_user_id">\@prasoon06</string>
 
     <string name="postContdIndicator">…</string>
+
+    <!-- Login Page Strings -->
     <string name="sign_in_header">Sign In</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="log_in_btn">Log In</string>
     <string name="sign_up_prompt">Don\'t have an account?</string>
+
+    <!-- Signup Page Strings -->
     <string name="sign_up_header">Sign Up</string>
     <string name="re_type_hint">Re-type Password</string>
     <string name="sign_up_btn">Create Account</string>
     <string name="login_prompt">Already Have An Account?</string>
-
 
     <!-- String arrays to hold all the data -->
     <string-array name="profile_pics">

@@ -1,6 +1,7 @@
 package com.prasoon.mockfeed;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,30 +41,40 @@ public class SignupActivity extends AppCompatActivity {
                     rePassword = repwd.getText().toString();
 
             //Check to verify all fields have been filled
-            if(TextUtils.isEmpty(username) || TextUtils.isEmpty(password) || TextUtils.isEmpty(rePassword)){
+            if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password) || TextUtils.isEmpty(rePassword)) {
                 Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
-            }else if(!password.equals(rePassword)) {//Check to avoid a typo in passwords
+            } else if (!password.equals(rePassword)) {//Check to avoid a typo in passwords
                 Toast.makeText(this, "Passwords Mismatch", Toast.LENGTH_SHORT).show();
             } else {
                 User newUser = new User(username, password);
 
                 //Check if the user is already present. If found then we don't allow the signup
-                new Thread(()->{
+                new Thread(() -> {
                     List<User> allUsers = database.userDao().getAllUsers();
 
                     //Check for matching usernames
                     boolean alreadyUser = false;
-                    for(User user: allUsers){
-                        if(user.getUsername().equals(newUser.getUsername())){
+                    for (User user : allUsers) {
+                        if (user.getUsername().equals(newUser.getUsername())) {
                             alreadyUser = true;
                             break;
                         }
                     }
 
-                    if(alreadyUser){
-                        runOnUiThread(()-> Toast.makeText(this, "User Already Exists", Toast.LENGTH_SHORT).show());
-                    } else {
+                    if (alreadyUser) {
+                        runOnUiThread(() -> Toast.makeText(this, "User Already Exists", Toast.LENGTH_SHORT).show());
+
+                    } else {//If everything is right then allow user creation and sign in
                         database.userDao().insertUser(newUser);
+
+                        //Before logging in, update the user status in shared preferences
+                        PreferenceManager.getDefaultSharedPreferences(this).edit()
+                                .putString(MainActivity.LOGIN_STATUS, MainActivity.LOGGED_IN)
+                                .putString(MainActivity.USERNAME, newUser.getUsername())
+                                .putString(MainActivity.PASSWORD, newUser.getPassword())
+                                .apply();
+
+                        //Log in now
                         startActivity(new Intent(this, MainActivity.class));
                     }
                 }).start();

@@ -1,6 +1,7 @@
 package com.prasoon.mockfeed;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //Instance variable to hold a reference to the app's database
     private UserDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +40,9 @@ public class LoginActivity extends AppCompatActivity {
             String inputName = username.getText().toString(), inputPwd = password.getText().toString();
 
             //Check to verify all fields have been filled
-            if(TextUtils.isEmpty(inputName) || TextUtils.isEmpty(inputPwd)){
+            if (TextUtils.isEmpty(inputName) || TextUtils.isEmpty(inputPwd)) {
                 Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
-            }else {
+            } else {
                 //Verify with the database
                 new Thread(() -> {
                     List<User> allUsers = database.userDao().getAllUsers();//Get list of all users
@@ -55,6 +57,14 @@ public class LoginActivity extends AppCompatActivity {
 
                     //If a match is found then allow the login
                     if (validUser) {
+                        //Before logging in, update the user status in shared preferences
+                        PreferenceManager.getDefaultSharedPreferences(this).edit()
+                                .putString(MainActivity.LOGIN_STATUS, MainActivity.LOGGED_IN)
+                                .putString(MainActivity.USERNAME, inputName)
+                                .putString(MainActivity.PASSWORD, inputPwd)
+                                .apply();
+
+                        //Log in
                         startActivity(new Intent(this, MainActivity.class));
                     } else {
                         runOnUiThread(() -> Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show());

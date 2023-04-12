@@ -1,7 +1,12 @@
 package com.prasoon.mockfeed;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+
+import androidx.preference.PreferenceManager;
+
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -12,9 +17,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.navigation.NavigationView;
+
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+
+    //These variables are used by the shared preferences to remember which user is currently logged in
+    public static final String LOGIN_STATUS = "login status";
+    public static final String LOGGED_OUT = "log out status";
+    public static final String LOGGED_IN = "log in status";
+
+    public static final String USERNAME = "username present in shared preferences";
+    public static final String PASSWORD = "password present in shared preferences";
+
 
     private ActionBarDrawerToggle drawerToggle;
 
@@ -22,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        checkUserState();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 
@@ -53,6 +71,25 @@ public class MainActivity extends AppCompatActivity {
         Adapter adapter = new Adapter(profilePics, userNames, userInfos, postPics, postTitles, postSmallInfos, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //Implement the logout feature
+        ((NavigationView) findViewById(R.id.navigation_view)).setNavigationItemSelectedListener(menuItem -> {
+            switch (menuItem.getItemId()) {
+                case R.id.menu_option_6:
+                    //Before logging out, update the user status in shared preferences
+                    PreferenceManager.getDefaultSharedPreferences(this).edit()
+                            .putString(MainActivity.LOGIN_STATUS, MainActivity.LOGGED_OUT)
+                            .apply();
+
+                    //Log out
+                    startActivity(new Intent(this, LoginActivity.class));
+                    return true;
+
+                default:
+                    return true;
+            }
+
+        });
     }
 
     //Necessary for the nav drawer button in the action bar to work. Don't know why
@@ -63,5 +100,27 @@ public class MainActivity extends AppCompatActivity {
         } else {
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    //First verifies that the required keys have been created by the app and then checks if the user
+    //is already logged in or not
+    void checkUserState() {
+        //Check the required key creation
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        if (sharedPreferences.getAll().size() == 0) {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(LOGIN_STATUS, LOGGED_OUT);
+            editor.putString(USERNAME, "John Doe");
+            editor.putString(PASSWORD, "Jane Doe");
+            editor.apply();
+
+        }
+
+        //Check the login status of the user
+        String loginStatus = sharedPreferences.getString(LOGIN_STATUS, null);
+        if (loginStatus != null && loginStatus.equals(LOGGED_OUT))
+            startActivity(new Intent(this, LoginActivity.class));
+
+
     }
 }
